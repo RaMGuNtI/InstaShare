@@ -1,0 +1,93 @@
+.stories-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  max-width: 1150px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.stories-wrapper {
+  width: 90%;
+}
+
+.story-card {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.story-card:hover{
+  cursor: pointer;
+}
+
+.story-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.story-username {
+  font-size: 14px;
+  color: #000;
+  margin-top: 6px;
+}
+
+
+.custom-arrow {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  top: unset;
+}
+
+.custom-arrow.left {
+  margin-right: 8px;
+}
+
+.custom-arrow.right {
+  margin-left: 8px;
+}
+
+
+.custom-arrow.disabled {
+  pointer-events: none;
+}
+
+
+.slick-slide > div {
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .story-image {
+    width: 50px;
+    height: 50px;
+  }
+  .stories-wrapper {
+  width: 80%;
+}
+  .story-username {
+    font-size: 12px;
+  }
+
+  .stories-container {
+    padding: 0 5px;
+  }
+
+  .custom-arrow {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+  }
+
+  .custom-arrow.left {
+    left: 0px;
+  }
+
+  .custom-arrow.right {
+    right: 0px;
+  }
+}

@@ -1,0 +1,20 @@
+/* This centers the entire layout like Instagram's boxed view */
+.app-wrapper {
+  max-width: 900px; /* or 800px for tighter layout */
+  margin: 0 auto;    /* center horizontally */
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05); /* optional soft border */
+  min-height: 100vh;
+}
+
+/* Optional: body background */
+body {
+  background-color: #fafafa;
+}
+@media (max-width: 768px) {
+  .app-wrapper {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+}

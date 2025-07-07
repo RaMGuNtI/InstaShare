@@ -1,0 +1,249 @@
+/* 🌐 Navbar Base */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🔰 Logo & Branding */
+.logobranding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logobranding img {
+  width: 50px;
+  height: auto;
+}
+
+.logobranding h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+/* 🖥️ Desktop Search & Links */
+.searchLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.serchcont {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  width: max-content;
+}
+
+.serchcont input {
+  border: none;
+  outline: none;
+  padding: 4px;
+  font-size: 14px;
+  background: transparent;
+  width: 160px;
+}
+
+.searchIcon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+}
+
+.searchIcon svg {
+  width: 16px;
+  height: 16px;
+  fill: #989898;
+}
+
+/* 🧭 Navigation Links */
+.links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.links a:hover {
+  color: #3b82f6;
+}
+
+/* 🚪 Logout Button */
+.logout button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout button:hover {
+  background-color: #2563eb;
+}
+
+/* 🍔 Hamburger Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* 🔽 Mobile Menu Styling */
+.mobileMenu {
+  display: none;
+}
+
+/* 📱 Responsive (Mobile) Styling */
+@media screen and (max-width: 768px) {
+  .searchLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .logobranding h3 {
+    font-size: 18px;
+  }
+
+  .logobranding img {
+    width: 36px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 16px;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    animation: dropdownFade 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    gap: 16px;
+    box-sizing: border-box;
+  }
+
+  @keyframes dropdownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .mobileMenu .serchcont {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: #f1f5f9;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mobileMenu .serchcont input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .mobileMenu .searchIcon {
+    margin-left: 8px;
+    cursor: pointer;
+  }
+
+  .mobileMenu .searchIcon svg {
+    width: 18px;
+    height: 18px;
+    fill: #666;
+  }
+
+  .mobileMenu .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobileMenu .links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .mobileMenu .links a:hover {
+    color: #3b82f6;
+  }
+
+  .mobileMenu .logout {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .mobileMenu .logout button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mobileMenu .logout button:hover {
+    background-color: #2563eb;
+  }
+}
+
+/* 🔧 Base Paragraph Reset */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-only {
+  display: flex;
+}

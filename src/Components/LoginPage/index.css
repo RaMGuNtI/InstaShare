@@ -1,0 +1,99 @@
+/* index.css */
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.loginPage img {
+  max-width: 100%;
+}
+
+.mainLogin {
+  width: 100%;
+  max-width: 350px;
+  background-color: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.icon img {
+  width: 50px;
+}
+
+.icon h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.userSection,
+.passSection {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+}
+
+.loginButton {
+  margin-top: 20px;
+}
+
+.loginButton button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2d8cf0;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.loginButton button:hover {
+  background-color: #1a73e8;
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 768px) {
+  .loginPage {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px;
+  }
+
+  .loginPage > img {
+    width: 40%;
+    max-width: 500px;
+    margin-right: 40px;
+  }
+
+  .mainLogin {
+    max-width: 400px;
+  }
+}
+    

@@ -1,0 +1,166 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #262626;
+}
+
+.profilePage {
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.selfInfo {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* Profile Picture */
+.profile-pic {
+  flex-shrink: 0;
+}
+
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Name + Follow + Bio */
+.nameDetails {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nameDetails h2 {
+  font-size: 28px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.followDetails {
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+}
+
+.followDetails p {
+  margin: 0;
+}
+
+.idAbout {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.idAbout b {
+  font-weight: 600;
+}
+
+/* Stories Section */
+.storiesSection {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  overflow-x: auto;
+}
+
+.storiesSection div {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.storiesSection img {
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #dbdbdb;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #efefef;
+  margin: 20px 0;
+}
+
+/* Posts Header */
+.postSection h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Grid of Posts */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.posts img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .selfInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .nameDetails h2 {
+    font-size: 22px;
+  }
+
+  .followDetails {
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .idAbout {
+    font-size: 13px;
+  }
+
+  .storiesSection {
+    justify-content: center;
+  }
+
+  .storiesSection img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .postSection h2 {
+    justify-content: center;
+  }
+
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+}
