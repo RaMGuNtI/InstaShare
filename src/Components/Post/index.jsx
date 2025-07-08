@@ -6,6 +6,7 @@ import { FaRegBookmark } from 'react-icons/fa';
 import { useContext } from 'react';
 import { SavePostContext } from '../context';
 import { FaBookmark } from 'react-icons/fa';
+
 const Post = ({ postDetails }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likesCount, setLikesCount] = useState(postDetails.likes_count);
@@ -39,7 +40,7 @@ const Post = ({ postDetails }) => {
   };
 
   return (
-    <div>
+    <div className="post-wrapper">
       <div
         onClick={() => triggerUserProfile(postDetails.user_id)}
         className="personInfo"

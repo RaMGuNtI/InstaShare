@@ -72,19 +72,35 @@
 /* 🧭 Navigation Links */
 .links {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   align-items: center;
 }
 
-.links a {
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
   font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
-.links a:hover {
+.nav-link:hover {
   color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.nav-link.active {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.nav-text {
+  display: none;
 }
 
 /* 🚪 Logout Button */
@@ -200,18 +216,32 @@
   .mobileMenu .links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
   }
 
-  .mobileMenu .links a {
+  .mobileMenu .nav-link {
     text-decoration: none;
     color: #333;
     font-size: 16px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .mobileMenu .links a:hover {
+  .mobileMenu .nav-link:hover {
     color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+  }
+
+  .mobileMenu .nav-link.active {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+    font-weight: 600;
   }
 
   .mobileMenu .logout {
@@ -246,4 +276,19 @@ p {
 
 .desktop-only {
   display: flex;
+}
+
+/* Desktop navigation text visibility */
+@media screen and (min-width: 1200px) {
+  .nav-text {
+    display: inline;
+  }
+  
+  .links {
+    gap: 16px;
+  }
+  
+  .nav-link {
+    padding: 12px 16px;
+  }
 }

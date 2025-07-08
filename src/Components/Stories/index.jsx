@@ -118,7 +118,7 @@ const Stories = () => {
       <div className="stories-wrapper">
         <Slider {...settings} ref={sliderRef}>
           {storyDetails.map((story) => (
-            <div onClick={()=>navigate(`/profile/${story.user_id}`)} className="story-card" key={story.user_id}>
+            <div onClick={()=>navigate(`/stories/${story.user_id}`)} className="story-card" key={story.user_id}>
               <img className="story-image" src={story.story_url} alt="story" />
               <p className="story-username">{story.user_name}</p>
             </div>
