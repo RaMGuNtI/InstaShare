@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import './index.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
-import { IoHome, IoHomeOutline, IoSearch, IoSearchOutline, IoCompass, IoCompassOutline, IoHeart, IoHeartOutline, IoPerson, IoPersonOutline, IoAdd, IoAddOutline, IoFilm, IoFilmOutline, IoPaperPlane, IoPaperPlaneOutline } from 'react-icons/io5';
+import SearchResults from '../SearchResults';
 
 const NavBar = () => {
   const [inp, setInp] = useState('');
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
   const logout = () => {
     Cookies.remove('JWTTOKEN');
     navigate('/login');
@@ -18,8 +17,6 @@ const NavBar = () => {
     console.log(inp);
     navigate(`/search/${inp}`);
   };
-
-  const isActive = (path) => location.pathname === path;
 
   return (
     <div>
@@ -51,33 +48,14 @@ const NavBar = () => {
             </div>
           </div>
           <div className="links">
-            <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
-              {isActive('/') ? <IoHome size={24} /> : <IoHomeOutline size={24} />}
-              <span className="nav-text">Home</span>
+            <Link to="/">
+              <p>Home</p>
             </Link>
-            <Link to="/explore" className={`nav-link ${isActive('/explore') ? 'active' : ''}`}>
-              {isActive('/explore') ? <IoCompass size={24} /> : <IoCompassOutline size={24} />}
-              <span className="nav-text">Explore</span>
+            <Link to="/profile">
+              <p>Profile</p>
             </Link>
-            <Link to="/reels" className={`nav-link ${isActive('/reels') ? 'active' : ''}`}>
-              {isActive('/reels') ? <IoFilm size={24} /> : <IoFilmOutline size={24} />}
-              <span className="nav-text">Reels</span>
-            </Link>
-            <Link to="/messages" className={`nav-link ${isActive('/messages') ? 'active' : ''}`}>
-              {isActive('/messages') ? <IoPaperPlane size={24} /> : <IoPaperPlaneOutline size={24} />}
-              <span className="nav-text">Messages</span>
-            </Link>
-            <Link to="/create" className={`nav-link ${isActive('/create') ? 'active' : ''}`}>
-              <IoAdd size={24} />
-              <span className="nav-text">Create</span>
-            </Link>
-            <Link to="/profile" className={`nav-link ${isActive('/profile') ? 'active' : ''}`}>
-              {isActive('/profile') ? <IoPerson size={24} /> : <IoPersonOutline size={24} />}
-              <span className="nav-text">Profile</span>
-            </Link>
-            <Link to="/saved" className={`nav-link ${isActive('/saved') ? 'active' : ''}`}>
-              {isActive('/saved') ? <IoHeart size={24} /> : <IoHeartOutline size={24} />}
-              <span className="nav-text">Saved</span>
+            <Link to="/saved">
+              <p>SavedPosts</p>
             </Link>
           </div>
           <div className="logout">
@@ -115,33 +93,14 @@ const NavBar = () => {
               </div>
 
               <div className="links">
-                <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
-                  {isActive('/') ? <IoHome size={20} /> : <IoHomeOutline size={20} />}
-                  <span>Home</span>
+                <Link to="/" onClick={(e) => e.stopPropagation()}>
+                  <p>Home</p>
                 </Link>
-                <Link to="/explore" className={`nav-link ${isActive('/explore') ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
-                  {isActive('/explore') ? <IoCompass size={20} /> : <IoCompassOutline size={20} />}
-                  <span>Explore</span>
+                <Link to="/profile" onClick={(e) => e.stopPropagation()}>
+                  <p>Profile</p>
                 </Link>
-                <Link to="/reels" className={`nav-link ${isActive('/reels') ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
-                  {isActive('/reels') ? <IoFilm size={20} /> : <IoFilmOutline size={20} />}
-                  <span>Reels</span>
-                </Link>
-                <Link to="/messages" className={`nav-link ${isActive('/messages') ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
-                  {isActive('/messages') ? <IoPaperPlane size={20} /> : <IoPaperPlaneOutline size={20} />}
-                  <span>Messages</span>
-                </Link>
-                <Link to="/create" className={`nav-link ${isActive('/create') ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
-                  <IoAdd size={20} />
-                  <span>Create</span>
-                </Link>
-                <Link to="/profile" className={`nav-link ${isActive('/profile') ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
-                  {isActive('/profile') ? <IoPerson size={20} /> : <IoPersonOutline size={20} />}
-                  <span>Profile</span>
-                </Link>
-                <Link to="/saved" className={`nav-link ${isActive('/saved') ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>
-                  {isActive('/saved') ? <IoHeart size={20} /> : <IoHeartOutline size={20} />}
-                  <span>Saved</span>
+                <Link to="/saved" onClick={(e) => e.stopPropagation()}>
+                  <p>SavedPosts</p>
                 </Link>
               </div>
 

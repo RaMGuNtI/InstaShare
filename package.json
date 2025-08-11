@@ -12,7 +12,6 @@
   "dependencies": {
     "bootstrap": "^5.3.7",
     "cookie-js": "^0.0.1",
-    "framer-motion": "^12.23.0",
     "js-cookie": "^3.0.5",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",

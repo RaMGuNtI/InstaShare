@@ -9,12 +9,6 @@ import OUserProfile from './Components/OUserProfile';
 import SearchResults from './Components/SearchResults';
 import PageNotFound from './Components/PageNotFound';
 import SavedPostsPage from './Components/SavedPostsPage';
-import Reels from './Components/Reels';
-import Explore from './Components/Explore';
-import DirectMessages from './Components/DirectMessages';
-import CreatePost from './Components/CreatePost';
-import StoriesViewer from './Components/StoriesViewer';
-
 function App() {
   const location = useLocation();
   const hideNavOnRoutes = ['/login'];
@@ -61,46 +55,6 @@ function App() {
           element={
             <ProtectedRoute>
               <SavedPostsPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/reels"
-          element={
-            <ProtectedRoute>
-              <Reels />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/explore"
-          element={
-            <ProtectedRoute>
-              <Explore />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/messages"
-          element={
-            <ProtectedRoute>
-              <DirectMessages />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/create"
-          element={
-            <ProtectedRoute>
-              <CreatePost />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/stories/:userId"
-          element={
-            <ProtectedRoute>
-              <StoriesViewer />
             </ProtectedRoute>
           }
         />
